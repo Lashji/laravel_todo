@@ -16,15 +16,18 @@ Route::get('/', function () {
 });
 
 Route::get('/new', [
-  'uses' => 'PagesController@new'
-  ]
-
+      'uses' => 'PagesController@new',
+    ]
 );
 
-Route::get('/about', function() {
-  return view('pages/about');
+Route::get('/about', function () {
+    return view('pages/about');
 });
 
 Route::get('/todos', [
-  'uses' => 'TodosController@index'
-]); 
+  'uses' => 'TodosController@index',
+]);
+
+Route::post('/create/todo', [
+    'uses' => 'TodosController@store',
+]);
