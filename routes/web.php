@@ -20,3 +20,11 @@ Route::get('/new', [
   ]
 
 );
+
+Route::get('/about', function() {
+  return view('pages/about');
+});
+
+Route::get('/todos', [
+  'uses' => 'TodosController@index'
+]); 
