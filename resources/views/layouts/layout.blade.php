@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>New View</title>
+        <title>Todos</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -67,6 +67,12 @@
         </style>
     </head>
     <body>
+        @if(Session::has('success'))
+
+            <div class="alert alert-success">{{Session::get('success')}}</div>
+
+        @endif
+
         <div class="flex-center position-ref full-height">
             
 
